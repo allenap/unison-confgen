@@ -1,0 +1,46 @@
+path = Library/bin
+path = Library/etc
+path = Library/lib
+ignore = Path Library/lib/android-[ns]dk-*
+ignore = Path Library/lib/btsync/*/.sync
+ignore = Path Library/lib/eclipse
+ignore = Path Library/lib/golang
+ignore = Path Library/lib/local
+ignore = Path Library/lib/site-python/site{,customize}.py[co]
+path = Library/man
+path = Library/share
+path = Library/src
+path = Library/.bzr
+path = Library/.bzrignore
+path = Library/.git
+path = Library/.gitignore
+ignore = Name *.py[co]
+ignore = Name __pycache__
+
+#
+# Symlinks pointing into Library.
+#
+
+path = .bash_logout
+path = .bash_profile
+path = .bash_sessions_disable
+path = .bashrc
+path = .colordiffrc
+path = .config/systemd
+path = .config/upstart
+path = .ctags
+path = .ec2
+path = .floorc
+path = .gitconfig
+path = .hgrc
+path = .imapfilter
+path = .inputrc
+path = .netrc
+path = .npmrc
+path = .pastebinit.xml
+path = .pip/pip.conf
+path = .pylint.d
+path = .pylintrc
+path = .pypirc
+path = .screenrc
+path = .tmux.conf

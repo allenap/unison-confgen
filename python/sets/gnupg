@@ -1,0 +1,7 @@
+path = .gnupg
+ignore = Path .gnupg/.#*
+ignore = Path .gnupg/gpg-agent-info-*
+ignore = Path .gnupg/gpg-agent.conf
+ignore = Path .gnupg/log-socket
+ignore = Path .gnupg/random_seed
+ignore = Path .gnupg/S.*

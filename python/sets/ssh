@@ -1,0 +1,10 @@
+# SSH configuration
+path = .ssh/.git
+path = .ssh/.gitignore
+path = .ssh/all-pub-keys
+path = .ssh/all-pub-keys.signed
+path = .ssh/all-pub-keys.asc
+path = .ssh/config
+path = .ssh/config.personal
+path = .ssh/Makefile
+path = .ssh/shared

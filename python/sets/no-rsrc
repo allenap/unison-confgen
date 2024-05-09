@@ -1,0 +1,2 @@
+# Don't sync resource forks between Mac and non-Mac systems.
+rsrc = false

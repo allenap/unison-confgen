@@ -1,0 +1,2 @@
+path = Work
+ignore = Regex Work/.*/elm-stuff

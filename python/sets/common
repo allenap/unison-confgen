@@ -1,0 +1,101 @@
+# -*- mode: conf -*-
+
+ignore = Name *.swp
+# Don't propogate these Mac files:
+ignore = Name {.DS_Store,.localized,.com.apple.*}
+# Don't propogate CD/DVD ISOs because they're normally huge!
+ignore = Name *.iso
+# Don't propogate .dvdproj because they're huge
+ignore = Name *.dvdproj
+# Ignore .fpbf files as they are burn folders
+ignore = Name *.fpbf
+# Ignore ___* files just as a quick and dirty way to save big things
+ignore = Name ___*
+# Ignore *~ backups
+ignore = Name *~
+# Ignore .em files
+ignore = Name .em
+# Ignore temporary files.
+ignore = Name .\#*
+# Ignore GnuPG sockets.
+ignore = Name S.gpg-agent
+# Ignore Duplicacy state.
+ignore = Name .duplicacy
+# MacOS seems to use this extension.
+ignore = Name *.nosync
+
+path = .emacs.d
+ignore = Path .emacs.d/ac-comphist.dat
+ignore = Path .emacs.d/auto-save-list
+ignore = Path .emacs.d/certifi
+ignore = Path .emacs.d/elpa
+ignore = Path .emacs.d/eshell
+ignore = Path .emacs.d/ido.last
+ignore = Path .emacs.d/scratch
+ignore = Path .emacs.d/session.*
+ignore = Path .emacs.d/transient
+ignore = Regex [.]emacs[.]d/.*[.]elc
+path = .gitignore
+path = .moin_ids
+path = .psqlrc
+path = .Xdefaults
+
+# Bazaar configs
+path = .bazaar
+ignore = Path .bazaar/pipeline-cachedir
+ignore = Path .bazaar/shell-history
+ignore = Path .bazaar/svn-cache
+path = .subversion
+
+# Config
+path = .config/user-dirs.dirs
+path = .config/user-dirs.locale
+
+# Python
+path = .pythonrc
+path = .ipython
+ignore = Path .ipython/{*.pyc,history,persist}
+ignore = Path .ipython/db/*
+ignore = Path .ipython/profile_*/*.sqlite
+ignore = Path .ipython/profile_*/{db,log,pid,security}/*
+
+# PostgreSQL (sockets and their locks).
+ignore = Name .s.PGSQL.*
+
+# Buildout
+path = .buildout
+ignore = Path .buildout/{cache,eggs}
+
+# Erlang
+path = .erlang.cookie
+
+# Silence Ubuntu's MOTD
+path = .hushlogin
+
+owner = false
+group = false
+times = true
+perms = -1
+sortbysize = false
+
+auto = true
+
+log = true
+
+# Unison keeps crashing when this isn't false.
+watch = false
+
+# Aliases
+rootalias = //coburg.fritz.box//Users/gavin -> //coburg//Users/gavin
+rootalias = //coburg.lan//Users/gavin -> //coburg//Users/gavin
+rootalias = //coburg.local//Users/gavin -> //coburg//Users/gavin
+rootalias = //eucula.fritz.box//Users/gavin -> //eucula//Users/gavin
+rootalias = //eucula.lan//Users/gavin -> //eucula//Users/gavin
+rootalias = //eucula.local//Users/gavin -> //eucula//Users/gavin
+rootalias = //poppet.fritz.box//Users/gavin -> //poppet//Users/gavin
+rootalias = //Poppet.fritz.box//Users/gavin -> //poppet//Users/gavin
+rootalias = //poppet.lan//Users/gavin -> //poppet//Users/gavin
+rootalias = //poppet.local//Users/gavin -> //poppet//Users/gavin
+rootalias = //yellowstone.fritz.box//Users/gavin -> //yellowstone//Users/gavin
+rootalias = //yellowstone.lan//Users/gavin -> //yellowstone//Users/gavin
+rootalias = //yellowstone.local//Users/gavin -> //yellowstone//Users/gavin

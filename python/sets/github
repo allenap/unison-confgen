@@ -1,0 +1,5 @@
+path = GitHub
+ignore = Regex GitHub/.*/pg_stat_tmp
+ignore = Regex GitHub/.*/elm-stuff
+ignore = Regex GitHub/.*/target
+ignore = Name .overmind.sock

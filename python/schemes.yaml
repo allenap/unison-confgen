@@ -1,0 +1,101 @@
+hosts:
+  cairngorm:
+    hostname: cairngorm
+    home: /home/gavin
+    sets:
+      - aws
+      - common
+      - github
+      - gnupg
+      - library
+      - linux
+      - ssh
+      - unison
+  coburg:
+    hostname: coburg
+    home: /Users/gavin
+    sets:
+      - aws
+      - common
+      - downloads
+      - github
+      - gnupg
+      - macos
+      - library
+      - no-rsrc
+      - ssh
+      - unison
+  culvain:
+    hostname: culvain
+    home: /home/gavin
+    sets:
+      - common
+      - library
+      - linux
+      - ssh
+      - unison
+  eucula:
+    hostname: eucula
+    home: /Users/gavin
+    sets:
+      - aws
+      - common
+      - downloads
+      - github
+      - gnupg
+      - macos
+      - library
+      - no-rsrc
+      - ssh
+      - unison
+      - work
+  grampian:
+    hostname: grampian
+    home: /home/gavin
+    sets:
+      - common
+      - library
+      - linux
+      - ssh
+      - unison
+    server:
+      - servercmd = ~/Library/Linux/bin/unison
+  madagascar:
+    hostname: madagascar
+    home: /home/gavin
+    sets:
+      - common
+      - gnupg
+      - library
+      - linux
+      - ssh
+      - unison
+  poppet:
+    hostname: poppet
+    home: /Users/gavin
+    sets:
+      # - aws
+      - common
+      # - github
+      # - gnupg
+      - macos
+      - library
+      - no-rsrc
+      - ssh
+      - unison
+      # - work
+  yellowstone:
+    hostname: yellowstone
+    home: /Users/gavin
+    sets:
+      - aws
+      - common
+      - downloads
+      - github
+      - gnupg
+      - macos
+      - library
+      - no-rsrc
+      - ssh
+      - unison
+      - work
