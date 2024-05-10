@@ -1,0 +1,200 @@
+# This was AUTOMATICALLY GENERATED - Do NOT edit!
+
+### common
+# -*- mode: conf -*-
+
+ignore = Name *.swp
+# Don't propogate these Mac files:
+ignore = Name {.DS_Store,.localized,.com.apple.*}
+# Don't propogate CD/DVD ISOs because they're normally huge!
+ignore = Name *.iso
+# Don't propogate .dvdproj because they're huge
+ignore = Name *.dvdproj
+# Ignore .fpbf files as they are burn folders
+ignore = Name *.fpbf
+# Ignore ___* files just as a quick and dirty way to save big things
+ignore = Name ___*
+# Ignore *~ backups
+ignore = Name *~
+# Ignore .em files
+ignore = Name .em
+# Ignore temporary files.
+ignore = Name .\#*
+# Ignore GnuPG sockets.
+ignore = Name S.gpg-agent
+# Ignore Duplicacy state.
+ignore = Name .duplicacy
+# MacOS seems to use this extension.
+ignore = Name *.nosync
+
+path = .emacs.d
+ignore = Path .emacs.d/ac-comphist.dat
+ignore = Path .emacs.d/auto-save-list
+ignore = Path .emacs.d/certifi
+ignore = Path .emacs.d/elpa
+ignore = Path .emacs.d/eshell
+ignore = Path .emacs.d/ido.last
+ignore = Path .emacs.d/scratch
+ignore = Path .emacs.d/session.*
+ignore = Path .emacs.d/transient
+ignore = Regex [.]emacs[.]d/.*[.]elc
+path = .gitignore
+path = .moin_ids
+path = .psqlrc
+path = .Xdefaults
+
+# Bazaar configs
+path = .bazaar
+ignore = Path .bazaar/pipeline-cachedir
+ignore = Path .bazaar/shell-history
+ignore = Path .bazaar/svn-cache
+path = .subversion
+
+# Config
+path = .config/user-dirs.dirs
+path = .config/user-dirs.locale
+
+# Python
+path = .pythonrc
+path = .ipython
+ignore = Path .ipython/{*.pyc,history,persist}
+ignore = Path .ipython/db/*
+ignore = Path .ipython/profile_*/*.sqlite
+ignore = Path .ipython/profile_*/{db,log,pid,security}/*
+
+# PostgreSQL (sockets and their locks).
+ignore = Name .s.PGSQL.*
+
+# Buildout
+path = .buildout
+ignore = Path .buildout/{cache,eggs}
+
+# Erlang
+path = .erlang.cookie
+
+# Silence Ubuntu's MOTD
+path = .hushlogin
+
+owner = false
+group = false
+times = true
+perms = -1
+sortbysize = false
+
+auto = true
+
+log = true
+
+# Unison keeps crashing when this isn't false.
+watch = false
+
+# Aliases
+rootalias = //coburg.fritz.box//Users/gavin -> //coburg//Users/gavin
+rootalias = //coburg.lan//Users/gavin -> //coburg//Users/gavin
+rootalias = //coburg.local//Users/gavin -> //coburg//Users/gavin
+rootalias = //eucula.fritz.box//Users/gavin -> //eucula//Users/gavin
+rootalias = //eucula.lan//Users/gavin -> //eucula//Users/gavin
+rootalias = //eucula.local//Users/gavin -> //eucula//Users/gavin
+rootalias = //poppet.fritz.box//Users/gavin -> //poppet//Users/gavin
+rootalias = //Poppet.fritz.box//Users/gavin -> //poppet//Users/gavin
+rootalias = //poppet.lan//Users/gavin -> //poppet//Users/gavin
+rootalias = //poppet.local//Users/gavin -> //poppet//Users/gavin
+rootalias = //yellowstone.fritz.box//Users/gavin -> //yellowstone//Users/gavin
+rootalias = //yellowstone.lan//Users/gavin -> //yellowstone//Users/gavin
+rootalias = //yellowstone.local//Users/gavin -> //yellowstone//Users/gavin
+### /common
+
+### library
+path = Library/bin
+path = Library/etc
+path = Library/lib
+ignore = Path Library/lib/android-[ns]dk-*
+ignore = Path Library/lib/btsync/*/.sync
+ignore = Path Library/lib/eclipse
+ignore = Path Library/lib/golang
+ignore = Path Library/lib/local
+ignore = Path Library/lib/site-python/site{,customize}.py[co]
+path = Library/man
+path = Library/share
+path = Library/src
+path = Library/.bzr
+path = Library/.bzrignore
+path = Library/.git
+path = Library/.gitignore
+ignore = Name *.py[co]
+ignore = Name __pycache__
+
+#
+# Symlinks pointing into Library.
+#
+
+path = .bash_logout
+path = .bash_profile
+path = .bash_sessions_disable
+path = .bashrc
+path = .colordiffrc
+path = .config/systemd
+path = .config/upstart
+path = .ctags
+path = .ec2
+path = .floorc
+path = .gitconfig
+path = .hgrc
+path = .imapfilter
+path = .inputrc
+path = .netrc
+path = .npmrc
+path = .pastebinit.xml
+path = .pip/pip.conf
+path = .pylint.d
+path = .pylintrc
+path = .pypirc
+path = .screenrc
+path = .tmux.conf
+### /library
+
+### macos
+path = Library/Darwin
+### /macos
+
+### no-rsrc
+# Don't sync resource forks between Mac and non-Mac systems.
+rsrc = false
+### /no-rsrc
+
+### ssh
+# SSH configuration
+path = .ssh/.git
+path = .ssh/.gitignore
+path = .ssh/all-pub-keys
+path = .ssh/all-pub-keys.signed
+path = .ssh/all-pub-keys.asc
+path = .ssh/config
+path = .ssh/config.personal
+path = .ssh/Makefile
+path = .ssh/shared
+### /ssh
+
+### unison
+path = .unison
+ignore = Path .unison/ar????????????????????????????????
+ignore = Path .unison/sc????????????????????????????????
+ignore = Path .unison/fp????????????????????????????????
+ignore = Path .unison/lk????????????????????????????????
+ignore = Path .unison/{*.log,*.prf}
+ignore = Path .unison/hostname
+ignore = Path .unison/build/ocaml-*
+ignore = Path .unison/build/unison-*
+### /unison
+
+# Don't use domain when deriving archive names.
+clientHostName = coburg-different
+
+root = /Users/gavin
+root = ssh://poppet//Users/gavin
+
+logfile = /Users/gavin/.logs/unison.coburg-poppet.log
+
+key = 6
+
+# End
