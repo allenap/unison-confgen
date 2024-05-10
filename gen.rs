@@ -1,3 +1,13 @@
+#!/usr/bin/env rust-script
+
+//! ```cargo
+//! [dependencies]
+//! serde = { version = "=1.0.201", features = ["derive"] }
+//! serde_yaml = { version = "=0.9.34" }  # DEPRECATED
+//! hostname = { version = "=0.4.0", features = [] }
+//! itertools = { version = "=0.12.1" }
+//! ```
+
 use std::collections::{HashMap, HashSet};
 use std::fmt::Write;
 use std::io::Write as WriteFmt;
