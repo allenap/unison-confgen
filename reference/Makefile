@@ -7,7 +7,7 @@ gen.old:
 
 .PHONY: gen.new
 gen.new:
-	rust-script $(CURDIR)/../gen.rs < schemes.yaml
+	cargo run --release < schemes.yaml
 
 .PHONY: clean
 clean:
