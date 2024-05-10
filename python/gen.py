@@ -49,7 +49,7 @@ def make_configs(here_config, there_configs):
 def make_config(here, there, sets, extra):
     lines = []
 
-    include(lines, (), *sets)
+    include(lines, (), *sorted(sets))
 
     lines.append("# Don't use domain when deriving archive names.")
     lines.append('clientHostName = %s' % here.hostname)
