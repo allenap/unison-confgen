@@ -3,6 +3,7 @@
         "culvain",
         "eucula",
         "gethostname",
+        "itertools",
         "overmind",
         "rsrc",
         "servercmd"

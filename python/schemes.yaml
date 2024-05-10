@@ -12,7 +12,7 @@ hosts:
       - ssh
       - unison
   coburg:
-    hostname: coburg
+    hostname: coburg-different # Note: hostname differs from stanza's name.
     home: /Users/gavin
     sets:
       - aws
