@@ -1,8 +1,9 @@
 # Python-based implementation (OLD, DEPRECATED, FOR REFERENCE ONLY)
 
-This is the old Python-based implementation. It's here for reference only. The
-new Rust-based implementation was tested to produce the exact same output as
-`gen.py` for the same files in the `sets` subdirectory.
+This is the old Python-based implementation and some example configuration
+files. It's here for reference only. The new Rust-based implementation was
+tested to produce the exact same output as `gen.py` for the same files in the
+`sets` subdirectory.
 
 ## Contents
 
