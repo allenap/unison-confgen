@@ -1,11 +1,20 @@
 {
     "cSpell.words": [
+        "compgen",
+        "COMPREPLY",
+        "confgen",
         "culvain",
+        "CWORD",
+        "dotfiles",
+        "esac",
         "eucula",
         "gethostname",
         "itertools",
+        "mapfile",
         "overmind",
         "rsrc",
-        "servercmd"
+        "servercmd",
+        "shellcheck",
+        "UNISONLOCALHOSTNAME"
     ]
 }
