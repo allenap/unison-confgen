@@ -180,3 +180,8 @@ day will see me:
 But I'm not holding my breath.
 
 Have fun!
+
+## License
+
+[GNU General Public License 3.0](https://www.gnu.org/licenses/gpl-3.0.html) (or
+later). See [LICENSE](LICENSE).
