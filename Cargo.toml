@@ -7,6 +7,10 @@ homepage = "https://github.com/allenap/unison-confgen"
 description = "Generate Unison configuration files from a YAML description"
 license-file = "LICENSE"
 
+[[bin]]
+name = "unison-confgen"
+path = "src/main.rs"
+
 [dependencies]
 serde = { version = "=1.0.201", features = ["derive"] }
 serde_yaml = { version = "=0.9.34" }                    # DEPRECATED

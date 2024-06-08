@@ -15,7 +15,7 @@ serves as a source of truth, so I'm usually syncing back and forth from a few
 different machines. One day I'll run `unison` on machine A to sync to machine B,
 and another day I'll do the reverse, then also to machine C, and combinations of
 those. It follows that I want to have the same configuration on every machine
-– so I use Unison itself to sync those configuration files around.
+– so I use Unison itself to sync those configuration files around.
 
 I also have different _sets_ of files that I want to sync. I want to sync
 dotfiles up to my server in the cloud, but not my financial records. I want to
@@ -24,7 +24,7 @@ but not my photos.
 
 ## Principle of operation
 
-This script takes a single configuration file – read from stdin – that describes
+This script takes a single configuration file – read from stdin – that describes
 all the hosts that I have. For example:
 
 ```yaml
@@ -56,8 +56,8 @@ hosts:
 This configuration file describes three hosts – _alice_, _bob_, and _carol_ –
 and the sets of files that each syncs.
 
-When I run `allenap-unison-confgen < schemes.yaml` on _alice_, two configuration
-files are generated:
+When I run `unison-confgen < schemes.yaml` on _alice_, two configuration files
+are generated:
 
 - `alice-bob.prf`
 - `alice-carol.prf`
@@ -102,9 +102,8 @@ include projects
 
 ## Usage
 
-I put the `allenap-unison-confgen` script on `PATH` – typically because I've
-used `cargo install` to install it, and Cargo's `bin` directory is already on my
-`PATH`.
+I put the `unison-confgen` binary on `PATH` – typically because I've used `cargo
+install` to install it, and Cargo's `bin` directory is already on my `PATH`.
 
 Then, in `~/.unison`, I have the `etc/schemes.yaml` configuration file, a `sets`
 subdirectory, and a `Makefile` to drive it:
@@ -115,8 +114,8 @@ all: clean gen
 
 .PHONY: gen
 gen:
-	@type allenap-unison-confgen >/dev/null || cargo install allenap-unison-confgen
-	allenap-unison-confgen < etc/schemes.yaml
+	@type unison-confgen >/dev/null || cargo install allenap-unison-confgen
+	unison-confgen < etc/schemes.yaml
 
 .PHONY: clean
 clean:
@@ -169,7 +168,7 @@ fi
 ```
 
 That's all. It's simple but effective; I've been using it for years. Recently I
-rewrote it in Rust – from Python – and this is the first time I've published it.
+rewrote it in Rust – from Python – and this is the first time I've published it.
 Since it does all I need, I probably won't work much on it. Well, maybe a rainy
 day will see me:
 
