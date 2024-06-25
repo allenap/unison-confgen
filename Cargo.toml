@@ -3,7 +3,7 @@ name = "allenap-unison-confgen"
 authors = ["Gavin Panella <gavin@allenap.me>"]
 version = "0.2.0"
 edition = "2021"
-homepage = "https://github.com/allenap/unison-confgen"
+repository = "https://github.com/allenap/unison-confgen"
 description = "Generate Unison configuration files from a YAML description"
 license-file = "LICENSE"
 
