@@ -16,3 +16,4 @@ serde = { version = "=1.0.203", features = ["derive"] }
 serde_yaml = { version = "=0.9.34" }                    # DEPRECATED
 hostname = { version = "=0.4.0", features = [] }
 itertools = { version = "=0.13.0" }
+toml = "0.8.20"

@@ -1,6 +1,6 @@
 use std::collections::{HashMap, HashSet};
 use std::fmt::Write;
-use std::io::Write as WriteFmt;
+use std::io::{Read, Write as IoWrite};
 use std::path::PathBuf;
 
 use itertools::chain;
@@ -35,8 +35,15 @@ fn main() -> Result<()> {
 
     // Load the schemes we can sync.
     let mut hosts = {
-        let stdin = std::io::stdin();
-        serde_yaml::from_reader::<_, Config>(stdin)?.hosts
+        let mut buffer = String::new();
+        std::io::stdin().read_to_string(&mut buffer)?;
+        // First try to parse the input as YAML, then fall back to TOML.
+        // Eventually I'll remove the YAML option.
+        let config = match serde_yaml::from_str::<'_, Config>(&buffer) {
+            Err(_) => toml::from_str::<Config>(&buffer)?,
+            Ok(config) => config,
+        };
+        config.hosts
     };
 
     let here_config = hosts
