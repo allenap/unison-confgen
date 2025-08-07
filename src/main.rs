@@ -37,12 +37,7 @@ fn main() -> Result<()> {
     let mut hosts = {
         let mut buffer = String::new();
         std::io::stdin().read_to_string(&mut buffer)?;
-        // First try to parse the input as YAML, then fall back to TOML.
-        // Eventually I'll remove the YAML option.
-        let config = match serde_yaml::from_str::<'_, Config>(&buffer) {
-            Err(_) => toml::from_str::<Config>(&buffer)?,
-            Ok(config) => config,
-        };
+        let config = toml::from_str::<Config>(&buffer)?;
         config.hosts
     };
 

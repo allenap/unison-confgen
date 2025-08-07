@@ -27,36 +27,28 @@ but not my photos.
 This script takes a single configuration file – read from stdin – that describes
 all the hosts that I have. For example:
 
-```yaml
-# schemes.yaml
-hosts:
-  alice:
-    hostname: alice.example.com
-    home: /home/gavin
-    sets:
-      - common
-      - financial
-      - github
-  bob:
-    hostname: bob.example.org
-    home: /Users/gavin
-    sets:
-      - common
-      - github
-      - photos
-  carol:
-    hostname: carol.example.net
-    home: /home/gavin
-    sets:
-      - common
-      - financial
-      - photos
+```toml
+# schemes.toml
+[hosts.alice]
+hostname = "alice.example.com"
+home = "/home/gavin"
+sets = ["common", "financial", "github"]
+
+[hosts.bob]
+hostname = "bob.example.org"
+home = "/Users/gavin"
+sets = ["common", "github", "photos"]
+
+[hosts.carol]
+hostname = "carol.example.net"
+home = "/home/gavin"
+sets = ["common", "financial", "photos"]
 ```
 
 This configuration file describes three hosts – _alice_, _bob_, and _carol_ –
 and the sets of files that each syncs.
 
-When I run `unison-confgen < schemes.yaml` on _alice_, two configuration files
+When I run `unison-confgen < schemes.toml` on _alice_, two configuration files
 are generated:
 
 - `alice-bob.prf`
@@ -88,7 +80,7 @@ ignore = Name .overmind.sock
 ```
 
 Paths, like `GitHub` above, are resolved relative to the `home` setting from
-`schemes.yaml`.
+`schemes.toml`.
 
 These set files are included verbatim in the generated configuration files, with
 one addition: one can use an `include` directive to include another set file:
@@ -105,7 +97,7 @@ include projects
 I put the `unison-confgen` binary on `PATH` – typically because I've used `cargo
 install` to install it, and Cargo's `bin` directory is already on my `PATH`.
 
-Then, in `~/.unison`, I have the `etc/schemes.yaml` configuration file, a `sets`
+Then, in `~/.unison`, I have the `etc/schemes.toml` configuration file, a `sets`
 subdirectory, and a `Makefile` to drive it:
 
 ```Makefile
@@ -115,7 +107,7 @@ all: clean gen
 .PHONY: gen
 gen:
 	@type unison-confgen >/dev/null || cargo install allenap-unison-confgen
-	unison-confgen < etc/schemes.yaml
+	unison-confgen < etc/schemes.toml
 
 .PHONY: clean
 clean:
