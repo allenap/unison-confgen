@@ -12,7 +12,7 @@ name = "unison-confgen"
 path = "src/main.rs"
 
 [dependencies]
-serde = { version = "=1.0.203", features = ["derive"] }
-hostname = { version = "=0.4.0", features = [] }
-itertools = { version = "=0.13.0" }
-toml = "0.8.20"
+serde = { version = "=1.0.219", features = ["derive"] }
+hostname = { version = "=0.4.1", features = [] }
+itertools = { version = "=0.14.0" }
+toml = "0.9.5"
